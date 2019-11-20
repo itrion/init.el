@@ -1,0 +1,8 @@
+/auto-save-list
+/elpa/*
+*.elc
+/recentf*
+/network-security.data
+/projectile-bookmarks.eld
+/projectile.cache
+*~
