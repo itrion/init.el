@@ -34,17 +34,8 @@ There are two things you can do about this warning:
  ;; If there is more than one, they won't work right.
  )
 
-(defun config-file-path (config)
-  "returns the path for the given configuration"
-  (concat "~/.emacs.d/configs/" config))
-
-(load (config-file-path "emacs.el"))
-(load (config-file-path "evil.el"))
-(load (config-file-path "helm.el"))
-(load (config-file-path "magit.el"))
-(load (config-file-path "powerline.el"))
-(load (config-file-path "projectile.el"))
-(load (config-file-path "which-key.el"))
+(mapc 'load (file-expand-wildcards "~/.emacs.d/configs/editor/*.el"))
+(mapc 'load (file-expand-wildcards "~/.emacs.d/configs/programming/*.el"))
 
 (require 'dracula-theme)
 
