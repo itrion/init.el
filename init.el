@@ -9,6 +9,7 @@ which is unsafe because it allows man-in-the-middle attacks.
 There are two things you can do about this warning:
 1. Install an Emacs version that does support SSL and be safe.
 2. Remove this warning from your init file so you won't see it again."))
+
   ;; Comment/uncomment these two lines to enable/disable MELPA and MELPA Stable as desired
   ;; (add-to-list 'package-archives (cons "melpa" (concat proto "://melpa.org/packages/")) t)
   (add-to-list 'package-archives (cons "melpa-stable" (concat proto "://stable.melpa.org/packages/")) t)
@@ -16,7 +17,26 @@ There are two things you can do about this warning:
     ;; For important compatibility libraries like cl-lib
     (add-to-list 'package-archives (cons "gnu" (concat proto "://elpa.gnu.org/packages/")))))
 
+(setq package-list
+      '(;; haskell-mode
+	which-key
+	helm
+	helm-descbinds
+	powerline
+	;; evil
+	magit
+	projectile
+	dracula-theme))
 (package-initialize)
+
+; fetch the list of packages available 
+(unless package-archive-contents
+  (package-refresh-contents))
+
+; install the missing packages
+(dolist (package package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
