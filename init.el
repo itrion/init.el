@@ -18,15 +18,17 @@ There are two things you can do about this warning:
     (add-to-list 'package-archives (cons "gnu" (concat proto "://elpa.gnu.org/packages/")))))
 
 (setq package-list
-      '(;; haskell-mode
-	which-key
+      '(dracula-theme
+	;; evil
+	;; haskell-mode
 	helm
 	helm-descbinds
-	powerline
-	;; evil
+	helm-projectile
 	magit
+	powerline
 	projectile
-	dracula-theme))
+	which-key
+	))
 (package-initialize)
 
 ; fetch the list of packages available 
