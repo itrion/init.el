@@ -6,8 +6,8 @@
 	  'haskell-indentation-mode
 	  'interactive-haskell-mode)
 
-(custom-set-variables
-  '(haskell-process-suggest-remove-import-lines t)
-  '(haskell-process-auto-import-loaded-modules t)
-  '(haskell-process-log t)
-  '(haskell-process-type 'stack-ghci))
+(setq haskell-process-suggest-remove-import-lines t)
+(setq haskell-process-auto-import-loaded-modules t)
+(setq haskell-process-log t)
+(setq haskell-process-type 'stack-ghci)
+(setq haskell-process-type (quote stack-ghci))

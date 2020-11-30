@@ -45,11 +45,6 @@ There are two things you can do about this warning:
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(haskell-process-auto-import-loaded-modules t)
- '(haskell-process-log t)
- '(haskell-process-suggest-remove-import-lines t)
- '(haskell-process-type (quote stack-ghci))
- '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
     (helm-projectile markdown-mode markdown-mode+ haskell-mode which-key helm helm-descbinds powerline magit projectile dracula-theme helm))))
@@ -66,3 +61,4 @@ There are two things you can do about this warning:
 (require 'dracula-theme)
 
 
+(put 'downcase-region 'disabled nil)
