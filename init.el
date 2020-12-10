@@ -27,6 +27,9 @@ There are two things you can do about this warning:
 	magit
 	powerline
 	projectile
+	undo-tree
+	visual-regexp
+	visual-regexp-steroids
 	which-key
 	))
 (package-initialize)
@@ -47,7 +50,7 @@ There are two things you can do about this warning:
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (helm-projectile markdown-mode markdown-mode+ haskell-mode which-key helm helm-descbinds powerline magit projectile dracula-theme helm))))
+    (helm-ag undo-tree helm-projectile markdown-mode markdown-mode+ haskell-mode which-key helm helm-descbinds powerline magit projectile dracula-theme helm))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
