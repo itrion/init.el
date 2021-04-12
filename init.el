@@ -31,7 +31,9 @@ There are two things you can do about this warning:
 	visual-regexp-steroids
 	which-key
 	))
-(package-initialize)
+
+(when  (< emacs-major-version 27)
+  (package-initialize))
 
 ; fetch the list of packages available 
 (unless package-archive-contents
