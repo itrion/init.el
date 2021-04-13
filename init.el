@@ -19,8 +19,7 @@ There are two things you can do about this warning:
 
 (setq package-list
       '(dracula-theme
-	;; evil
-	;; haskell-mode
+	git-timemachine
 	helm
 	helm-descbinds
 	helm-projectile
