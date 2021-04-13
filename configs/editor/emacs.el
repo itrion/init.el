@@ -9,6 +9,8 @@
       scroll-bar-mode -1
       shift-select-mode t
 
+      auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/"))
+
       backup-directory-alist '(("." . "~/.emacs.d/backup"))
       backup-by-copying t    ; Don't delink hardlinks
       version-control t      ; Use version numbers on backups
