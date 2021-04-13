@@ -30,6 +30,7 @@
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
+(global-set-key (kbd "s-k") 'kill-this-buffer)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (global-set-key (kbd "C-c b <up>") 'windmove-up)
 (global-set-key (kbd "C-c b <down>") 'windmove-down)
