@@ -2,15 +2,14 @@
 		    :family "Fira Code"
 		    :height 140)
 
-(setq delete-by-moving-to-trash t
+(setq create-lockfiles nil
+      delete-by-moving-to-trash t
       global-hl-line-mode t
       inhibit-startup-screen t
       line-number-mode t
       scroll-bar-mode -1
       shift-select-mode t
-
-      auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/"))
-
+      auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/" t))
       backup-directory-alist '(("." . "~/.emacs.d/backup"))
       backup-by-copying t    ; Don't delink hardlinks
       version-control t      ; Use version numbers on backups
