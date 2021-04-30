@@ -1,13 +1,17 @@
 (global-set-key (kbd "s-k") 'kill-this-buffer)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
-;; Bufffer related actions
+;; Bufffers related action
 (global-set-key (kbd "C-c b <up>") 'windmove-up)
 (global-set-key (kbd "C-c b <down>") 'windmove-down)
 (global-set-key (kbd "C-c b <left>") 'windmove-left)
 (global-set-key (kbd "C-c b <right>") 'windmove-right)
 
-;; Org actionssn
+;; Git and version control
+(global-set-key (kbd "C-c g s") 'magit-status)
+(global-set-key (kbd "C-c g p") 'magit-dispatch-popup)
+
+;; Org actions
 (global-set-key (kbd "C-c o u") 'org-update-checkbox-count)
 
 ;; Toggle modes and functionalities
