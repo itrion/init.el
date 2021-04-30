@@ -23,6 +23,7 @@ There are two things you can do about this warning:
 	helm
 	helm-descbinds
 	helm-projectile
+	htmlize
 	magit
 	powerline
 	projectile
