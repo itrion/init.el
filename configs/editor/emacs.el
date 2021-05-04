@@ -1,6 +1,10 @@
+(require 'dracula-theme)
+(load-theme 'dracula t)
 (set-face-attribute 'default nil
 		    :family "Fira Code"
 		    :height 140)
+
+(put 'downcase-region 'disabled nil)
 
 (setq create-lockfiles nil
       delete-by-moving-to-trash t
@@ -29,3 +33,4 @@
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)

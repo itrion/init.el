@@ -19,6 +19,7 @@ There are two things you can do about this warning:
 
 (setq package-list
       '(dracula-theme
+	dockerfile-mode
 	git-timemachine
 	helm
 	helm-descbinds
@@ -27,6 +28,7 @@ There are two things you can do about this warning:
 	magit
 	powerline
 	projectile
+	rainbow-delimiters
 	undo-tree
 	visual-regexp
 	visual-regexp-steroids
@@ -51,8 +53,7 @@ There are two things you can do about this warning:
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   (quote
-    (helm-ag undo-tree helm-projectile markdown-mode markdown-mode+ haskell-mode which-key helm helm-descbinds powerline magit projectile dracula-theme helm))))
+   '(rainbow-delimiters which-key visual-regexp-steroids undo-tree powerline magit htmlize helm-projectile helm-descbinds git-timemachine dracula-theme dockerfile-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -63,7 +64,3 @@ There are two things you can do about this warning:
 (mapc 'load (file-expand-wildcards "~/.emacs.d/configs/editor/*.el"))
 (mapc 'load (file-expand-wildcards "~/.emacs.d/configs/programming/*.el"))
 
-(require 'dracula-theme)
-
-
-(put 'downcase-region 'disabled nil)

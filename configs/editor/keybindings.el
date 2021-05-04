@@ -14,6 +14,10 @@
 ;; Org actions
 (global-set-key (kbd "C-c o u") 'org-update-checkbox-count)
 
+;; Elisp actions
+(global-set-key (kbd "C-c e e b") 'eval-buffer)
+(global-set-key (kbd "C-c e e r") 'eval-region)
+
 ;; Toggle modes and functionalities
 (global-set-key (kbd "C-c t l") 'toggle-truncate-lines)
 
