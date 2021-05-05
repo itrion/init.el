@@ -1,11 +1,10 @@
-(global-set-key (kbd "s-k") 'kill-this-buffer)
-(global-set-key (kbd "C-x C-b") 'ibuffer)
-
 ;; Bufffers related action
 (global-set-key (kbd "C-c b <up>") 'windmove-up)
 (global-set-key (kbd "C-c b <down>") 'windmove-down)
 (global-set-key (kbd "C-c b <left>") 'windmove-left)
 (global-set-key (kbd "C-c b <right>") 'windmove-right)
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+(global-set-key (kbd "s-k") 'kill-this-buffer)
 
 ;; Git and version control
 (global-set-key (kbd "C-c g s") 'magit-status)
