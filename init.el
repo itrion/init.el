@@ -26,6 +26,7 @@ There are two things you can do about this warning:
 	helm-projectile
 	htmlize
 	magit
+	org-bullets
 	powerline
 	projectile
 	rainbow-delimiters
