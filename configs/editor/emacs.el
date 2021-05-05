@@ -30,6 +30,7 @@
 ;; either customize it (see the info node ‘Easy Customization’)
 ;; or call the function ‘tool-bar-mode’.
 (tool-bar-mode -1)
+(global-display-line-numbers-mode 1)
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
