@@ -65,3 +65,5 @@ There are two things you can do about this warning:
 (mapc 'load (file-expand-wildcards "~/.emacs.d/configs/editor/*.el"))
 (mapc 'load (file-expand-wildcards "~/.emacs.d/configs/programming/*.el"))
 
+;; Keybindings must be loaded after all the config packages to ensure everything is configured and defined before
+(load "~/.emacs.d/keybindings.el")

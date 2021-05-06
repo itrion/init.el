@@ -4,6 +4,5 @@
 
 ;;(setq projectile-switch-project-action 'magit-status)
 
-(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (helm-projectile-on)
 (projectile-mode +1)
