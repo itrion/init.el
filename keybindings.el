@@ -29,6 +29,7 @@
 (defalias 'org
   (let ((map (make-sparse-keymap)))
     (define-key map (kbd "u") 'org-update-checkbox-count)
+    (define-key map (kbd "l") 'org-insert-link)
     map))
 
 (defalias 'toggles/modes
