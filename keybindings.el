@@ -24,6 +24,7 @@
   (let ((map (make-sparse-keymap)))
     (define-key map (kbd "s") 'magit-status)
     (define-key map (kbd "p") 'magit-dispatch-popup)
+    (define-key map (kbd "t") 'git-timemachine)
     map))
 
 (defalias 'org
