@@ -36,6 +36,7 @@
 (defalias 'toggles/modes
   (let ((map (make-sparse-keymap)))
     (define-key map (kbd "l") 'toggle-truncate-lines)
+    (define-key map (kbd "g") 'golden-ratio-mode)
     map))
 
 (which-key-add-key-based-replacements  "M-m a" "applications")
