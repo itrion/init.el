@@ -23,11 +23,14 @@ There are two things you can do about this warning:
 	dockerfile-mode
 	flycheck
 	git-timemachine
+	golden-ratio
 	helm
 	helm-descbinds
 	helm-projectile
+	helpful
 	htmlize
 	magit
+	markdown-mode
 	org-bullets
 	powerline
 	projectile
