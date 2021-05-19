@@ -1,8 +1,6 @@
 ;; By default, M-m is bound to the back-to-indentation command
 (global-unset-key (kbd "M-m"))
 
-(setq which-key-enable-extended-define-key t)
-
 (defalias 'buffers
   (let ((map (make-sparse-keymap)))
     (define-key map (kbd "<up>") 'windmove-up)
@@ -19,6 +17,15 @@
     (define-key map (kbd "r") 'eval-region)
     map))
 
+(defalias 'features
+  (let ((bookmarks (make-sparse-keymap))
+	(features (make-sparse-keymap)))
+    ;; Bookmarks
+    (define-key bookmarks (kbd "s") 'bookmark-set)
+    (define-key bookmarks (kbd "j") 'bookmark-jump)
+    (define-key bookmarks (kbd "l") 'list-bookmarks)
+    (define-key features (kbd "b") bookmarks)
+    features))
 
 (defalias 'git
   (let ((map (make-sparse-keymap)))
@@ -47,6 +54,7 @@
 (which-key-add-key-based-replacements  "M-m e" "elisp/errors")
 (global-set-key (kbd "M-m e e") 'elisp)
 
+(global-set-key (kbd "M-m f") 'features)
 (global-set-key (kbd "M-m g") 'git)
 (global-set-key (kbd "M-m t") 'toggles/modes)
 (define-key projectile-mode-map (kbd "M-m p") 'projectile-command-map)
