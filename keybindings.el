@@ -9,6 +9,7 @@
     (define-key map (kbd "<right>") 'windmove-right)
     (define-key map (kbd "b") 'ibuffer)
     (define-key map (kbd "k") 'kill-this-buffer)
+    (define-key map (kbd "R") 'revert-buffer)
     map))
 
 (defalias 'elisp
@@ -29,6 +30,7 @@
 
 (defalias 'git
   (let ((map (make-sparse-keymap)))
+    (define-key map (kbd "L") 'magit-list-repositories)
     (define-key map (kbd "s") 'magit-status)
     (define-key map (kbd "p") 'magit-dispatch-popup)
     (define-key map (kbd "t") 'git-timemachine)
