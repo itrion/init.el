@@ -19,3 +19,11 @@
       )
 
 (helm-autoresize-mode 1)
+
+;; Display the helm mini buffer always at the bottom
+;; https://www.reddit.com/r/emacs/comments/345vtl/make_helm_window_at_the_bottom_without_using_any/
+(add-to-list 'display-buffer-alist
+             `(,(rx bos "*helm" (* not-newline) "*" eos)
+               (display-buffer-in-side-window)
+               (inhibit-same-window . t)
+               (window-height . 0.6)))
