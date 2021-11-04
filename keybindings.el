@@ -46,6 +46,8 @@
   (let ((map (make-sparse-keymap)))
     (define-key map (kbd "l") 'toggle-truncate-lines)
     (define-key map (kbd "g") 'golden-ratio-mode)
+    (define-key map (kbd "r (") 'rainbow-delimiters-mode)
+    (define-key map (kbd "r i") 'rainbow-identifiers-mode)
     map))
 
 (which-key-add-key-based-replacements  "M-m a" "applications")
