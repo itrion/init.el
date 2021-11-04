@@ -73,3 +73,4 @@ There are two things you can do about this warning:
 
 ;; Keybindings must be loaded after all the config packages to ensure everything is configured and defined before
 (load "~/.emacs.d/keybindings.el")
+(put 'narrow-to-region 'disabled nil)
