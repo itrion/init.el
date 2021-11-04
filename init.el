@@ -35,6 +35,7 @@ There are two things you can do about this warning:
 	powerline
 	projectile
 	rainbow-delimiters
+	rainbow-identifiers
 	undo-tree
 	visual-regexp
 	visual-regexp-steroids
