@@ -48,6 +48,7 @@
     (define-key map (kbd "g") 'golden-ratio-mode)
     (define-key map (kbd "r (") 'rainbow-delimiters-mode)
     (define-key map (kbd "r i") 'rainbow-identifiers-mode)
+    (define-key map (kbd "t") 'helm-themes)
     map))
 
 (which-key-add-key-based-replacements  "M-m a" "applications")
@@ -61,7 +62,10 @@
 
 (global-set-key (kbd "M-m f") 'features)
 (global-set-key (kbd "M-m g") 'git)
+
+(which-key-add-key-based-replacements  "M-m t r" "rainbow")
 (global-set-key (kbd "M-m t") 'toggles/modes)
+
 (define-key projectile-mode-map (kbd "M-m p") 'projectile-command-map)
 
 (global-set-key (kbd "s-k") 'kill-this-buffer)
