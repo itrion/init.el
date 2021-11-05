@@ -1,4 +1,11 @@
+;;; init.el --- My personal emacs configuration
+
+;;; Commentary:
+;; 
+
+;;; Code:
 (require 'package)
+
 (let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
                     (not (gnutls-available-p))))
        (proto (if no-ssl "http" "https")))
@@ -19,7 +26,6 @@ There are two things you can do about this warning:
 
 (setq package-list
       '(company
-	dracula-theme
 	dockerfile-mode
 	flycheck
 	git-timemachine
@@ -27,6 +33,7 @@ There are two things you can do about this warning:
 	helm
 	helm-descbinds
 	helm-projectile
+	helm-themes
 	helpful
 	htmlize
 	magit
@@ -40,16 +47,19 @@ There are two things you can do about this warning:
 	visual-regexp
 	visual-regexp-steroids
 	which-key
+	;; Themes
+	dracula-theme
+	humanoid-themes
 	))
 
 (when  (< emacs-major-version 27)
   (package-initialize))
 
-; fetch the list of packages available 
+;; fetch the list of packages available
 (unless package-archive-contents
   (package-refresh-contents))
 
-; install the missing packages
+;; install the missing packages
 (dolist (package package-list)
   (unless (package-installed-p package)
     (package-install package)))
@@ -74,3 +84,5 @@ There are two things you can do about this warning:
 ;; Keybindings must be loaded after all the config packages to ensure everything is configured and defined before
 (load "~/.emacs.d/keybindings.el")
 (put 'narrow-to-region 'disabled nil)
+
+;;; init.el ends here
