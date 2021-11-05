@@ -57,6 +57,7 @@
 
 (which-key-add-key-based-replacements  "M-m e" "elisp/errors")
 (global-set-key (kbd "M-m e e") 'elisp)
+(define-key flycheck-mode-map (kbd "M-m e r") flycheck-command-map)
 
 (global-set-key (kbd "M-m f") 'features)
 (global-set-key (kbd "M-m g") 'git)
