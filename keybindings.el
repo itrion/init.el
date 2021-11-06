@@ -36,6 +36,11 @@
     (define-key map (kbd "t") 'git-timemachine)
     map))
 
+(defalias 'journal
+  (let ((map (make-sparse-keymap)))
+    (define-key map (kbd "i") 'org-journal-new-entry)
+    map))
+
 (defalias 'org
   (let ((map (make-sparse-keymap)))
     (define-key map (kbd "u") 'org-update-checkbox-count)
@@ -48,11 +53,13 @@
     (define-key map (kbd "g") 'golden-ratio-mode)
     (define-key map (kbd "r (") 'rainbow-delimiters-mode)
     (define-key map (kbd "r i") 'rainbow-identifiers-mode)
+    (define-key map (kbd "s") 'flyspell-mode)
     (define-key map (kbd "t") 'helm-themes)
     map))
 
 (which-key-add-key-based-replacements  "M-m a" "applications")
 (global-set-key (kbd "M-m a o") 'org)
+(global-set-key (kbd "M-m a j") 'journal)
 
 (global-set-key (kbd "M-m b") 'buffers)
 
@@ -85,6 +92,9 @@
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
+
+;; Flyspell
+(define-key flyspell-mode-map (kbd "C-;") 'flyspell-correct-wrapper) ; enable flyspell-correct-helm
 
 ;; Helpful
 (global-set-key (kbd "C-h f") #'helpful-callable)

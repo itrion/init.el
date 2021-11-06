@@ -25,9 +25,11 @@ There are two things you can do about this warning:
     (add-to-list 'package-archives (cons "gnu" (concat proto "://elpa.gnu.org/packages/")))))
 
 (setq package-list
-      '(company
+      '(auto-dictionary
+	company
 	dockerfile-mode
 	flycheck
+	flyspell-correct-helm
 	git-timemachine
 	golden-ratio
 	helm
@@ -39,6 +41,7 @@ There are two things you can do about this warning:
 	magit
 	markdown-mode
 	org-bullets
+	org-journal
 	powerline
 	projectile
 	rainbow-delimiters
