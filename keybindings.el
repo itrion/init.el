@@ -10,6 +10,7 @@
     (define-key map (kbd "b") 'ibuffer)
     (define-key map (kbd "k") 'kill-this-buffer)
     (define-key map (kbd "R") 'revert-buffer)
+    (define-key map (kbd "v") 'recover-this-file)
     map))
 
 (defalias 'elisp
@@ -49,8 +50,9 @@
 
 (defalias 'toggles/modes
   (let ((map (make-sparse-keymap)))
-    (define-key map (kbd "l") 'toggle-truncate-lines)
     (define-key map (kbd "g") 'golden-ratio-mode)
+    (define-key map (kbd "h") 'hl-line-mode)
+    (define-key map (kbd "l") 'toggle-truncate-lines)
     (define-key map (kbd "r (") 'rainbow-delimiters-mode)
     (define-key map (kbd "r i") 'rainbow-identifiers-mode)
     (define-key map (kbd "s") 'flyspell-mode)
