@@ -3,6 +3,7 @@
 
 (defalias 'buffers
   (let ((map (make-sparse-keymap)))
+    (define-key map (kbd "+") 'transpose-frame)
     (define-key map (kbd "<up>") 'windmove-up)
     (define-key map (kbd "<down>") 'windmove-down)
     (define-key map (kbd "<left>") 'windmove-left)

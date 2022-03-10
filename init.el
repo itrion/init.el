@@ -46,6 +46,7 @@ There are two things you can do about this warning:
 	projectile
 	rainbow-delimiters
 	rainbow-identifiers
+	transpose-frame
 	undo-tree
 	visual-regexp
 	visual-regexp-steroids
