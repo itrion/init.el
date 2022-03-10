@@ -11,6 +11,7 @@
     (define-key map (kbd "b") 'ibuffer)
     (define-key map (kbd "k") 'kill-this-buffer)
     (define-key map (kbd "R") 'revert-buffer)
+    (define-key map (kbd "r") 'rename-buffer)
     (define-key map (kbd "v") 'recover-this-file)
     map))
 
