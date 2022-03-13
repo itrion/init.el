@@ -25,9 +25,11 @@ There are two things you can do about this warning:
     (add-to-list 'package-archives (cons "gnu" (concat proto "://elpa.gnu.org/packages/")))))
 
 (setq package-list
-      '(auto-dictionary
+      '(all-the-icons
+	auto-dictionary
 	company
 	dockerfile-mode
+	doom-modeline
 	flycheck
 	flyspell-correct-helm
 	git-timemachine
