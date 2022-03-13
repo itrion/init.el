@@ -1,3 +1,9 @@
+;;; org.el --- configure org-mode
+
+;;; Commentary:
+;;
+
+;;; Code:
 (require 'org-bullets)
 (require 'org-journal)
 (add-hook 'org-mode-hook (lambda () (progn (org-bullets-mode 1)
@@ -28,3 +34,5 @@ Similar to 'org-capture' like behavior"
   (kill-buffer-and-window))
 
 (define-key org-journal-mode-map (kbd "C-c C-c") 'org-journal-save-entry-and-exit)
+
+;;; org.el ends here

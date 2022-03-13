@@ -1,3 +1,9 @@
+;;; emacs.el --- configure emacs general behaviour
+
+;;; Commentary:
+;;
+
+;;; Code:
 (require 'dracula-theme)
 (load-theme 'dracula t)
 (set-face-attribute 'default nil
