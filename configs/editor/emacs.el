@@ -45,6 +45,8 @@
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
-(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+(add-hook 'prog-mode-hook (lambda ()
+                            (rainbow-delimiters-mode 1)
+                            (display-line-numbers-mode 1)))
 
 ;;; emacs.el ends here
