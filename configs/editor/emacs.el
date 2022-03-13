@@ -5,7 +5,8 @@
 
 ;;; Code:
 (require 'dracula-theme)
-(load-theme 'dracula t)
+
+(load-theme 'misterioso t)
 (set-face-attribute 'default nil
 		    :family "Fira Code"
 		    :height 140)
