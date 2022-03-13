@@ -28,6 +28,10 @@
       version-control t      ; Use version numbers on backups
       )
 
+(setq-default display-line-numbers-width    4
+              completion-ignore-case        t            ;; Ignore case when completing
+              )
+
 ;; Setting these variables directly does not take effect;
 ;; either customize it (see the info node ‘Easy Customization’)
 ;; or call the functions
@@ -35,8 +39,12 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
+(fset 'yes-or-no-p 'y-or-n-p)	;; Set yes or no to y/n
+
 (global-display-line-numbers-mode 1)
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+
+;;; emacs.el ends here
