@@ -12,20 +12,20 @@
 
 (put 'downcase-region 'disabled nil)
 
-(setq create-lockfiles nil
+(setq auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/" t))
+      backup-by-copying t    ; Don't delink hardlinks
+      backup-directory-alist '(("." . "~/.emacs.d/backup"))
+      create-lockfiles nil
       delete-by-moving-to-trash t
+      delete-old-versions t  ; Automatically delete excess backups
+      ediff-window-setup-function 'ediff-setup-windows-plain ; open edif in the same window
       global-hl-line-mode t
       inhibit-startup-screen t
-      line-number-mode t
-      shift-select-mode t
-      auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/" t))
-      backup-directory-alist '(("." . "~/.emacs.d/backup"))
-      backup-by-copying t    ; Don't delink hardlinks
-      version-control t      ; Use version numbers on backups
-      delete-old-versions t  ; Automatically delete excess backups
       kept-new-versions 20   ; how many of the newest versions to keep
       kept-old-versions 5    ; and how many of the old
-      ediff-window-setup-function 'ediff-setup-windows-plain ; open edif in the same window
+      line-number-mode t
+      shift-select-mode t
+      version-control t      ; Use version numbers on backups
       )
 
 ;; Setting these variables directly does not take effect;
