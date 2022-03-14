@@ -8,6 +8,8 @@
 (require 'doom-modeline)
 
 (doom-modeline-mode 1)
+(nyan-mode 1)
+(nyan-start-animation)
 (setq
  ;; Configuration taken from the home page https://seagle0128.github.io/doom-modeline/
  ;; How tall the mode-line should be. It's only respected in GUI.

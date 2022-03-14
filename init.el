@@ -43,6 +43,7 @@ There are two things you can do about this warning:
 	magit
 	markdown-mode
 	minions
+	nyan-mode
 	org-bullets
 	org-journal
 	powerline
