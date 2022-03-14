@@ -42,6 +42,7 @@ There are two things you can do about this warning:
 	htmlize
 	magit
 	markdown-mode
+	minions
 	org-bullets
 	org-journal
 	powerline

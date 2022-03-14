@@ -80,7 +80,7 @@
  doom-modeline-buffer-name t
 
  ;; Whether display the minor modes in the mode-line.
- doom-modeline-minor-modes nil
+ doom-modeline-minor-modes t
 
  ;; If non-nil, a word count will be added to the selection-info modeline segment.
  doom-modeline-enable-word-count nil
