@@ -8,12 +8,11 @@
 (require 'doom-modeline)
 
 (doom-modeline-mode 1)
-
 (setq
  ;; Configuration taken from the home page https://seagle0128.github.io/doom-modeline/
  ;; How tall the mode-line should be. It's only respected in GUI.
  ;; If the actual char height is larger, it respects the actual height.
- doom-modeline-height 25
+ doom-modeline-height 0
 
  ;; How wide the mode-line bar should be. It's only respected in GUI.
  doom-modeline-bar-width 4
@@ -171,4 +170,6 @@
   doom-modeline-before-update-env-hook nil
   doom-modeline-after-update-env-hook nil)
 
+(set-face-attribute 'mode-line nil :family "JetBrains Mono" :height 100)
+(set-face-attribute 'mode-line-inactive nil :family "JetBrains Mono" :height 100)
 ;;; doom-modeline.el ends here
