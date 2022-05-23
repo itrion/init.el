@@ -19,7 +19,8 @@
       org-hide-block-startup t
       org-startup-indented t
       org-startup-folded t
-
+      org-default-notes-file "~/notepad/notepad.org"
+      initial-buffer-choice  org-default-notes-file
       org-journal-dir "~/notepad/journal"
       org-journal-file-format "%Y-%m-%d.journal"
       org-journal-file-type 'monthly

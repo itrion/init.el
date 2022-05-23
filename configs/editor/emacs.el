@@ -4,12 +4,13 @@
 ;;
 
 ;;; Code:
-(require 'dracula-theme)
 
 (load-theme 'misterioso t)
 (set-face-attribute 'default nil
-		    :family "Fira Code"
-		    :height 140)
+		    :family "JetBrains Mono"
+		    :height 120
+		    :weight 'light
+		    )
 
 (put 'downcase-region 'disabled nil)
 
