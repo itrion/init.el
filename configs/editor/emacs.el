@@ -17,6 +17,7 @@
 (setq auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/" t))
       backup-by-copying t    ; Don't delink hardlinks
       backup-directory-alist '(("." . "~/.emacs.d/backup"))
+      undo-tree-history-directory-alist backup-directory-alist
       create-lockfiles nil
       delete-by-moving-to-trash t
       delete-old-versions t  ; Automatically delete excess backups
