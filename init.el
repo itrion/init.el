@@ -1,7 +1,6 @@
 ;;; init.el --- My personal emacs configuration
 
 ;;; Commentary:
-;; 
 
 ;;; Code:
 (require 'package)
