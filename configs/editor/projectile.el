@@ -1,8 +1,11 @@
 ;; Configure Projectile https://www.projectile.mx/en/latest/
-(require 'projectile)
-(require 'helm-projectile)
+(use-package projectile
+  :ensure helm
+  :ensure helm-projectile
 
-;;(setq projectile-switch-project-action 'magit-status)
+  :config
+  (helm-projectile-on)
+  (projectile-mode +1)
 
-(helm-projectile-on)
-(projectile-mode +1)
+  :bind-keymap
+  ("M-m p" . projectile-command-map ))

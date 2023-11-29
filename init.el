@@ -17,47 +17,18 @@ There are two things you can do about this warning:
 2. Remove this warning from your init file so you won't see it again."))
 
   ;; Comment/uncomment these two lines to enable/disable MELPA and MELPA Stable as desired
-  ;; (add-to-list 'package-archives (cons "melpa" (concat proto "://melpa.org/packages/")) t)
+  (add-to-list 'package-archives (cons "melpa" (concat proto "://melpa.org/packages/")) t)
   (add-to-list 'package-archives (cons "melpa-stable" (concat proto "://stable.melpa.org/packages/")) t)
   (when (< emacs-major-version 24)
     ;; For important compatibility libraries like cl-lib
     (add-to-list 'package-archives (cons "gnu" (concat proto "://elpa.gnu.org/packages/")))))
 
-(setq package-list
-      '(all-the-icons
-	auto-dictionary
-	company
-	dockerfile-mode
-	doom-modeline
-	flycheck
-	flyspell-correct-helm
-	git-timemachine
-	golden-ratio
-	helm
-	helm-descbinds
-	helm-projectile
-	helm-themes
-	helpful
-	htmlize
-	magit
-	markdown-mode
-	minions
-	nyan-mode
-	org-bullets
-	org-journal
-	powerline
-	projectile
-	rainbow-delimiters
-	rainbow-identifiers
-	transpose-frame
-	undo-tree
-	visual-regexp
-	visual-regexp-steroids
-	which-key
-	;; Themes
-	dracula-theme
-	humanoid-themes
-	))
+(setq package-list '(
+		     use-package
+		     rainbow-delimiters
+		     rainbow-identifiers
+		     all-the-icons
+ 		     ))
 
 (when  (< emacs-major-version 27)
   (package-initialize))
@@ -71,13 +42,16 @@ There are two things you can do about this warning:
   (unless (package-installed-p package)
     (package-install package)))
 
+(require 'use-package-ensure)
+(setq use-package-always-ensure t)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(which-key visual-regexp-steroids visual-regexp undo-tree rainbow-delimiters powerline org-bullets magit htmlize helm-projectile helm-descbinds helm git-timemachine flycheck dockerfile-mode dracula-theme company)))
+   '(helm helm-themes which-key visual-regexp-steroids use-package undo-tree rainbow-identifiers rainbow-delimiters org-journal org-bullets org-appear nyan-mode minions magit htmlize helpful golden-ratio git-timemachine doom-modeline auto-dictionary all-the-icons)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -85,11 +59,17 @@ There are two things you can do about this warning:
  ;; If there is more than one, they won't work right.
  )
 
+;; This line is to prevent this error
+;; File mode specification error: (void-variable flyspell-delayed-commands)
+;; Which seems to be in used by org-babel but apparently nobody is defining its value)
+(defvar flyspell-delayed-commands nil)
+
+;; unset keybinding to use it in the configs
+(global-unset-key (kbd "M-m"))
+
 (mapc 'load (file-expand-wildcards "~/.emacs.d/configs/editor/*.el"))
 (mapc 'load (file-expand-wildcards "~/.emacs.d/configs/programming/*.el"))
 
-;; Keybindings must be loaded after all the config packages to ensure everything is configured and defined before
-(load "~/.emacs.d/keybindings.el")
 (put 'narrow-to-region 'disabled nil)
 
 ;;; init.el ends here
