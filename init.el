@@ -51,7 +51,7 @@ There are two things you can do about this warning:
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(helm helm-themes which-key visual-regexp-steroids use-package undo-tree rainbow-identifiers rainbow-delimiters org-journal org-bullets org-appear nyan-mode minions magit htmlize helpful golden-ratio git-timemachine doom-modeline auto-dictionary all-the-icons)))
+   '(helm-projectile flyspell-correct-helm helm helm-themes which-key visual-regexp-steroids use-package undo-tree rainbow-identifiers rainbow-delimiters org-journal org-bullets org-appear nyan-mode minions magit htmlize helpful golden-ratio git-timemachine doom-modeline auto-dictionary all-the-icons)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
