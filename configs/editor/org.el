@@ -30,11 +30,5 @@
   (add-to-list 'org-agenda-files org-journal-dir)
   :bind (("M-m a o u" . org-update-checkbox-count)
 	 ("M-m a o l" . org-insert-link))
-  ;; (defalias 'org
-  ;;   (let ((map (make-sparse-keymap)))
-  ;;     (define-key map (kbd "u") 'org-update-checkbox-count)
-  ;;     (define-key map (kbd "l") 'org-insert-link)
-  ;;     map))
-  ;; (global-set-key (kbd "M-m a o") 'org)
   )
 ;;; org.el ends here
