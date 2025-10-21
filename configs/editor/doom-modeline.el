@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 ;;; doom-modeline.el --- Configure the doom-modeline
 
 ;;; Commentary:

@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 (use-package magit
   :config
   (setq magit-status-buffer-switch-function 'switch-to-buffer

@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 ;;; emacs.el --- configure emacs general behaviour
 
 ;;; Commentary:

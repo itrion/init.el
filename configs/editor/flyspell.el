@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 ;;; flyspell.el --- Configuration for flyspell
 
 ;;; Commentary:

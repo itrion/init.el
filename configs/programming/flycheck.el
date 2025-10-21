@@ -1,2 +1,5 @@
-(require 'flycheck)
-(add-hook 'after-init-hook #'global-flycheck-mode)
+;;; -*- lexical-binding: t; -*-
+(use-package flycheck
+  :ensure t
+  :config
+  (add-hook 'after-init-hook #'global-flycheck-mode))

@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 ;; Configure Projectile https://www.projectile.mx/en/latest/
 (use-package projectile
   :ensure helm
