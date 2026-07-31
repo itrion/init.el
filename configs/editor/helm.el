@@ -1,6 +1,6 @@
+;;; -*- lexical-binding: t; -*-
 ;; For more information about configuring helm: http://tuhdo.github.io/helm-intro.html
 (use-package helm
-  :ensure helm-themes
   :config
   (helm-mode 1)
   (helm-autoresize-mode 1)
@@ -32,7 +32,6 @@
 	 ("C-x C-f" . helm-find-files)
 	 ("M-x" . helm-M-x)
 	 ("M-y" . helm-show-kill-ring)
-	 ("M-m t T" . helm-themes)
 	 :map helm-map
 	 ("<tab>" . helm-execute-persistent-action)
 	 :map helm-command-map

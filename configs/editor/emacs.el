@@ -8,7 +8,7 @@
 (load-theme 'misterioso t)
 (set-face-attribute 'default nil
 		    :family "JetBrains Mono"
-		    :height 120
+		    :height 130
 		    :weight 'light
 		    )
 
@@ -48,6 +48,9 @@
 (add-hook 'prog-mode-hook (lambda ()
                             (rainbow-delimiters-mode 1)
                             (display-line-numbers-mode 1)))
+
+(use-package markdown-mode)
+
 (use-package helpful
   :bind (("C-h f" . #'helpful-callable)
 	 ("C-h v" . #'helpful-variable)
