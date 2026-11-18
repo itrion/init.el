@@ -14,6 +14,14 @@
 
 (put 'downcase-region 'disabled nil)
 
+(global-auto-revert-mode t); buffers when regaining focus
+
+(add-function
+ :after after-focus-change-function
+ (lambda (&rest _)
+   (unless (frame-focus-state)
+     (save-some-buffers t))))
+
 (setq auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/" t))
       backup-by-copying t    ; Don't delink hardlinks
       backup-directory-alist '(("." . "~/.emacs.d/backup"))
@@ -83,11 +91,34 @@
   (which-key-add-key-based-replacements  "M-m e" "elisp/errors")
   (which-key-add-key-based-replacements  "M-m p" "projects")
   (which-key-add-key-based-replacements  "M-m t" "toggles")
+  (which-key-add-key-based-replacements  "M-m x" "perspective")
 
   (setq which-key-show-early-on-C-h t
 	which-key-enable-extended-define-key t))
 
 (use-package htmlize)
+
+(use-package persp-mode
+  :ensure t  
+  :init  
+  (setq persp-mode t) ; Enable persp-mode on startup  
+  (setq persp-autosave-mode t) ; Auto-save perspectives  
+  (setq persp-save-dir "~/.emacs.d/perspectives/") ; Where to save sessions  
+  :bind (("M-m x c" . persp-create) ; Create new perspective  
+         ("M-m x s" . persp-switch) ; Switch perspectives  
+         ("M-m x r" . persp-rename) ; Rename perspective  
+         ("M-m x k" . persp-kill)   ; Delete perspective  
+         ("M-m x l" . persp-load)   ; Load saved perspective  
+         ("M-m x a" . persp-add-buffer) ; Add buffer to perspective  
+         ("M-m x i" . persp-import-buffer) ; Import buffer from another perspective  
+         ))  
+ 
+; Integrate with Projectile for project-aware workspaces  
+;; (use-package projectile-persp  
+;;   :ensure t  
+;;   :after (persp-mode projectile)  
+;;   :config  
+;;   (projectile-persp-mode t)) ; Auto-link perspectives to Projectile projects  
 
 
 (global-set-key (kbd "M-m e e b") 'eval-buffer)
