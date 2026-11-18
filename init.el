@@ -57,9 +57,10 @@ There are two things you can do about this warning:
 		   flycheck flyspell-correct-helm git-timemachine
 		   golden-ratio helm-projectile helpful htmlize magit
 		   markdown-mode minions nyan-mode org-appear
-		   org-bullets org-journal rainbow-delimiters
-		   rainbow-identifiers restclient restclient-jq
-		   undo-tree visual-regexp-steroids)))
+		   org-bullets org-journal persp-mode projectile-persp
+		   rainbow-delimiters rainbow-identifiers restclient
+		   restclient-helm restclient-jq undo-tree
+		   visual-regexp-steroids)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
